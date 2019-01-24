@@ -1,20 +1,29 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express')
+const bodyParser = require('body-parser')
 
-const config = require('./config');
-const loadStackExchangeRoute = require('./discover-information');
+const app = express() 
+const port = 5000 
+app.use(bodyParser.json()) 
 
-const app = express();
-app.use(bodyParser.json());
+app.post('/', (req, res) => {
+  console.log(req.body)
 
-loadStackExchangeRoute(app);
+  res.send({
+    replies: [{
+      type: 'text',
+      content: 'Roger that',
+    }], 
+    conversation: {
+      memory: { key: 'value' }
+    }
+  })
+})
 
-app.post('/errors', function(req, res) {
-  console.log(req.body);
-  res.sendStatus(200);
-});
+app.post('/errors', (req, res) => {
+  console.log(req.body) 
+  res.send() 
+}) 
 
-const port = config.PORT;
-app.listen(port, function() {
-  console.log(`App is listening on port ${port}`);
-});
+app.listen(port, () => { 
+  console.log('Server is running on port 5000') 
+})
