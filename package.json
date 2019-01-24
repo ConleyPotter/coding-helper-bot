@@ -1,12 +1,12 @@
 {
   "name": "chatbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A starter chatbot",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
-  "author": "",
+  "author": "Conley Potter",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
@@ -15,5 +15,14 @@
   },
   "engines": {
     "node": "10.8.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConleyPotter/coding-helper-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ConleyPotter/coding-helper-bot/issues"
+  },
+  "homepage": "https://github.com/ConleyPotter/coding-helper-bot#readme"
 }
